@@ -76,6 +76,12 @@ BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 # Platform
 TARGET_BOARD_PLATFORM := sp9863a
 
+# system prop
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+
+# fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
