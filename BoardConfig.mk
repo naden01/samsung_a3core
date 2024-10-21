@@ -155,3 +155,17 @@ TW_DEVICE_VERSION := naze | a03core
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 612
 TW_DEFAULT_BRIGHTNESS := 255
+
+# Logcat
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
+# Prevent TWRP from unmounting /system
+TW_NEVER_UNMOUNT_SYSTEM := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
+
+# StatusBar
+TW_STATUS_ICONS_ALIGN := center
+TW_CUSTOM_CPU_POS     := "300"
+TW_CUSTOM_CLOCK_POS   := "70"
+TW_CUSTOM_BATTERY_POS := "790"
