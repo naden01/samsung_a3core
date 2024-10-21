@@ -1,9 +1,7 @@
 import /init.recovery.samsung.rc
 
 on init
-    write /proc/sys/kernel/hung_task_timeout_secs 0
-    chown system root /proc/cpwcn/wdtirq
-    chmod 766 /proc/cpwcn/wdtirq
+    write /proc/sys/kernel/hung_task_timeout_secs 
 
 on late-init
     setprop ro.debuggable 1
@@ -18,14 +16,6 @@ on fs
     symlink /dev/block/platform/13520000.ufs /dev/block/bootdevice
     symlink /dev/block/platform/13520000.ufs/by-name /dev/block/by-name
     symlink /dev/block/platform/13520000.ufs/by-name/param /dev/block/param
-    chown system system sys/class/sec/tsp/input/enabled
-    chmod 664 sys/class/sec/tsp/input/enabled
-
-on post-fs-data
-    chown system system /proc/tp_gesture
-    chmod 0660 /proc/tp_gesture
-    chown system system /proc/icn85xx_tool
-    chmod 0660 /proc/icn85xx_tool
 
 on boot
     setprop sys.usb.config adb
