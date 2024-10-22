@@ -70,7 +70,6 @@ BOARD_MKBOOTIMG_ARGS := \
 	--header_version $(BOARD_BOOT_HEADER_VERSION) \
 	--pagesize $(BOARD_KERNEL_PAGESIZE) \
 	--board "SRPUH09A004" \
-	--recovery_dtbo $(BOARD_PREBUILT_DTBOIMAGE) \
 	--dtb_offset $(BOARD_DTB_OFFSET)
 
 # Kernel - prebuilt
